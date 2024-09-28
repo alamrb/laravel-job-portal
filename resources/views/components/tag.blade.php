@@ -1,4 +1,4 @@
-@props(['size' =>'base'])
+@props(['tag','size' =>'base'])
 
 
 
@@ -13,4 +13,4 @@ $baseClass = "bg-white/10  rounded-xl  font-bold transition-colors duration-300"
     }
 @endphp
 
- <a class="{{ $baseClass }}" href="#">{{ $slot }}</a>
+ <a href="/tags/{{ strtolower($tag->name) }}" class="{{ $baseClass }}" href="#">{{ $tag->name }}</a>
